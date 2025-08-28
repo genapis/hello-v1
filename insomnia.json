@@ -1,0 +1,36 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-10-27T10:00:00.000Z",
+    "__export_source": "apim-generator",
+    "resources": [
+        {
+            "_id": "wrk_1",
+            "_type": "workspace",
+            "name": "Hello World API",
+            "description": "",
+            "scope": "collection"
+        },
+        {
+            "_id": "req_1",
+            "_type": "request",
+            "parentId": "wrk_1",
+            "name": "Returns a greeting",
+            "url": "url/hello",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {}
+        },
+        {
+            "_id": "env_1",
+            "_type": "environment",
+            "parentId": "wrk_1",
+            "name": "Base Environment",
+            "data": {
+                "base_url": "https://api.example.com/hello/v1"
+            }
+        }
+    ]
+}

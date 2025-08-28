@@ -1,0 +1,25 @@
+openapi: 3.1.0
+info:
+  title: Hello World API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/hello/v1
+paths:
+  /hello:
+    get:
+      summary: Returns a greeting
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Hello, world!\ncomponents:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - ApiKeyAuth: []

@@ -1,0 +1,13 @@
+_format_version: "3.0"
+services:
+  - name: "hello-world-api"
+    url: "https://api.example.com/hello/v1"
+    routes:
+      - name: "hello-world-api-route"
+        paths:
+          - "/hello"
+    plugins:
+      - name: "key-auth"
+        config:
+          key_names:
+            - "X-API-Key"
