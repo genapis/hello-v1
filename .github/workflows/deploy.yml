@@ -1,0 +1,17 @@
+name: Deploy Konnect API
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # Required for GitHub OIDC authentication
+
+jobs:
+  deploy-api:
+    uses: genapis/kong-konnect-deploy/.github/workflows/deploy.yml@main
+    with:
+      region: eu
