@@ -6,12 +6,8 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-  id-token: write # Required for GitHub OIDC authentication
-
 jobs:
-  deploy-api:
+  deploy:
     uses: genapis/kong-konnect-deploy/.github/workflows/deploy.yml@v0.0.1
     with:
       region: eu
