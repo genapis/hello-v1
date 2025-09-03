@@ -11,3 +11,6 @@ jobs:
     uses: genapis/kong-konnect-deploy/.github/workflows/deploy.yml@v0.0.1
     with:
       region: eu
+    secrets: inherit
+    permissions:
+      contents: read
