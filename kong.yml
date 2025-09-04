@@ -1,4 +1,7 @@
 _format_version: "3.0"
+_info:
+  select_tags:
+    - hello-world
 services:
   - name: "hello-world-api"
     url: "https://api.example.com/hello/v1"
