@@ -29,7 +29,7 @@
             "parentId": "wrk_1",
             "name": "Base Environment",
             "data": {
-                "base_url": "https://api.example.com/hello/v1"
+                "base_url": "https://api.apiprimer.com/hello/v1"
             }
         }
     ]

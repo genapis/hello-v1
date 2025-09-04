@@ -8,9 +8,9 @@ on:
 
 jobs:
   deploy:
-    uses: genapis/kong-konnect-deploy/.github/workflows/deploy.yml@v0.0.1
+    uses: genapis/kong-konnect-deploy/.github/workflows/deploy.yml@main
     with:
-      region: eu
+      REGION: eu
     secrets: inherit
     permissions:
       contents: read
