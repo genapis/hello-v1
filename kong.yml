@@ -1,0 +1,19 @@
+_format_version: "3.0"
+_info:
+  select_tags: 
+    - "hello-world"
+services: 
+  - name: "hello-world-api"
+    url: "https://apimocks.free.beeceptor.com"
+    routes:
+      - name: "hello-world-api-route"
+        paths: 
+          - "~/hello"
+    plugins: 
+      - name: "openid-connect"
+        config:
+          issuer: "https://dev-xerurkzp.us.auth0.com/.well-known/openid-configuration"
+          audience:
+            - "https://api.apiprimer.com"
+          auth_methods:
+            - "client_credentials"

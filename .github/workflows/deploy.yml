@@ -1,0 +1,17 @@
+
+name: Deploy Konnect API
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: genapis/kong-konnect-deploy/.github/workflows/deploy.yml@main
+    with:
+      REGION: eu
+    secrets: inherit
+    permissions:
+      contents: read

@@ -1,0 +1,44 @@
+_type: export
+__export_format: 4
+__export_date: '2025-10-24T10:00:00.000Z'
+__export_source: apim-generator
+resources:
+  - _id: wrk_1
+    _type: workspace
+    name: Hello World API
+    description: ''
+    scope: collection
+  - _id: req_1
+    _type: request
+    parentId: wrk_1
+    name: Returns a greeting
+    url: "base_url/hello"
+    method: GET
+    scripts:
+      afterResponse: |+
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+  - _id: env_1
+    _type: environment
+    parentId: wrk_1
+    name: Base Environment
+    data:
+      base_url: 'https://apimocks.free.beeceptor.com'
+  - _id: tst_1
+    _type: unit_test
+    parentId: req_1
+    name: Returns 200
+    code: |-
+      const response = await insomnia.send();
+      expect(response.status).to.equal(200);
